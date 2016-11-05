@@ -1,5 +1,5 @@
 var profile = require("./profile.js");
-const readline = require('readline');
+var readline = require("readline");
 var username;
 
 const rl = readline.createInterface({
@@ -14,6 +14,6 @@ rl.question('Which Treehouse user would you like to lookup? ', (answer) => {
 });
 
 rl.on('close', (input) => {
-    console.log('Searching for user', username);
+    console.log('\nSearching for user ' + '"' + username + '"' + '\n');
     profile.get(username);
 });
